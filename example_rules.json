@@ -1,0 +1,71 @@
+{
+    "version": 3,
+    "source": "ff3-importer-1.5.4",
+    "created_at": "2024-08-28T18:28:19-04:00",
+    "date": "Y-m-d",
+    "default_account": 10,
+    "delimiter": "comma",
+    "headers": true,
+    "rules": true,
+    "skip_form": true,
+    "add_import_tag": true,
+    "roles": [
+        "account-number",
+        "_ignore",
+        "_ignore",
+        "_ignore",
+        "external-id",
+        "date_transaction",
+        "date_process",
+        "amount",
+        "description",
+        "opposing-name",
+        "note"
+    ],
+    "do_mapping": [
+        true,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        false,
+        true,
+        false
+    ],
+    "mapping": {
+        "0": {
+            "ACT-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX": 3,
+            "ACT-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX": 4,
+            "ACT-XXXXXXXX-XXXX-XXXX-XXXX-XXXXXXXXXXXX": 5
+        },
+        "3": {
+            "Checking Account": 3,
+            "Credit Card": 4,
+            "Savings Account": 5
+        }
+    },
+    "duplicate_detection_method": "cell",
+    "ignore_duplicate_lines": true,
+    "unique_column_index": 4,
+    "unique_column_type": "external-id",
+    "flow": "file",
+    "identifier": "0",
+    "connection": "0",
+    "ignore_spectre_categories": false,
+    "map_all_data": true,
+    "accounts": [],
+    "date_range": "",
+    "date_range_number": 30,
+    "date_range_unit": "d",
+    "date_not_before": "",
+    "date_not_after": "",
+    "nordigen_country": "",
+    "nordigen_bank": "",
+    "nordigen_requisitions": [],
+    "nordigen_max_days": "90",
+    "conversion": true,
+    "ignore_duplicate_transactions": false
+}
